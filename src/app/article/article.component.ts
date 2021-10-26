@@ -22,6 +22,7 @@ export class ArticleComponent implements OnInit {
   }
   voteDown():boolean {
     this.article.voteDown();
+    //check
     return false;
   }
 
