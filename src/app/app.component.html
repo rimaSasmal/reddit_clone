@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div align="center" class="col-6 container mt-5" style="background-color: #e0dfdc;padding: 20px;border-radius: 10px;">
+<form class="text-center" style="color: #757575;">
+  <h3>Add a Link</h3>
+
+  <div class="md-form">
+    <label for="title" class="mr-2">Title : </label>
+    <input  name="title" #newtitle>
+  </div>
+  <div class="md-form">
+    <label for="link" class="mr-2">Link :</label>
+    <input  name="link" #newlink>
+  </div>
+  <button class="btn btn-sm btn-primary" (click)="addArticle(newtitle, newlink)">
+  Submit link
+ </button>
+ </form>
+ </div>
+ 
+ <div align="center" class="col-6 container mt-10 " *ngFor="let article of sortArticles()">
+  <app-article [article]="article"></app-article>
+</div>

@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-2 col-xs-6 ml-4 mt-2 mb-2 card" style="background-color: #cdf7ef;">
+        <div class="card-body w-20">
+            <div class="card-title">{{article.votes}}</div>
+        <div class="card-subtitle text-muted">Points</div>
+    </div>
+    </div>
+    <div class="col-md-4 col-xs-6 mr-4 mt-2 mb-2 card ">
+        <div class="card-body">
+        <a class="card-title  " href="{{article.link}}">{{article.title}}</a>
+        <ul style="list-style-type: none;">
+            <li >
+                <a class="card-link" href (click) ="voteUp()">
+                    <i class="far fa-thumbs-up mr-2"></i><i>upvote</i>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href (click) ="voteDown()">
+                    <i class="far fa-thumbs-down mr-2"></i><i>downVote</i>
+                </a>
+            </li>
+        </ul>
+        </div>
+    </div>
+</div>
